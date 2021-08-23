@@ -1,0 +1,20 @@
+<div class="card">
+  <div class="card-header">
+    <div class="company-title d-flex">
+      <img [src]="company.logo">
+      <h2>{{company.name}}</h2>
+    </div>
+    <button (click)="detail.classList.toggle('expanded')" class="detail-revealer">
+      {{detail.classList.contains('expanded') ? 'Ocultar detalhe da ação' : 'Ver detalhe da ação'}}
+      <span [class.flip]="detail.classList.contains('expanded')" class="po-icon po-icon-arrow-down"></span>
+    </button>
+  </div>
+  <div #detail class="collapsible-area">
+    <div class="card-details">
+      <p>
+        {{company.description}}
+      </p>
+      <button class="important-btn">VER MAIS</button>
+    </div>
+  </div>
+</div>

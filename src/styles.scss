@@ -1,1 +1,45 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'colors';
+
+html {
+  overflow-y: overlay;
+  //   font-size: 90%;
+}
+
+body {
+  background: $lightgrey;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                            button styling reset                            */
+/* -------------------------------------------------------------------------- */
+button {
+  background: unset;
+  border: unset;
+  font-family: inherit;
+  padding: unset;
+  cursor: pointer;
+  transition: filter 0.2s ease;
+
+
+  &:hover {
+    filter: brightness(0.96) contrast(1.2);
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                             input styling reset                            */
+/* -------------------------------------------------------------------------- */
+input {
+  outline: unset;
+  margin: unset;
+}

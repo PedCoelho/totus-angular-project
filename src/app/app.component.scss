@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+* {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+
+
+.main-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #4c79e1, #243edd);
+
+  & img {
+    margin: 8rem 5rem 5rem 5rem;
+    max-width: max-content;
+  }
+
+}
+
+img.svg-wave {
+  /* -------------------------------------------------------------------------- */
+  /*       to get rid of microscopic white line when scaling down SVG wave      */
+  /* -------------------------------------------------------------------------- */
+  margin-top: -1px;
+  object-fit: cover;
+}

@@ -1,0 +1,127 @@
+@import '../../../colors';
+
+
+.card {
+  background: white;
+  border: 1.5px solid#ebebeb;
+  border-radius: 2px;
+  margin-bottom: 1.5rem;
+
+  &-header,
+  &-details {
+    width: 100%;
+    display: flex;
+    padding: min(3%, 1.5rem);
+    justify-content: space-between;
+  }
+
+  &-header {
+    align-items: center;
+
+    .company-title {
+      align-items: center;
+      flex-wrap: wrap;
+      min-width: 3rem;
+
+
+      h2 {
+        margin: .5rem;
+        color: $grey_text;
+        font-weight: 500;
+        font-size: 1.5rem;
+        white-space: pre-wrap;
+      }
+
+      img {
+        object-fit: fill;
+        margin: 0.5rem;
+        height: 2rem;
+        width: auto;
+        min-width: 0;
+        image-rendering: -webkit-optimize-contrast;
+      }
+
+      @media (max-width:960px) {
+        flex-flow: column;
+        align-items: flex-start;
+
+        img {
+          height: unset;
+        }
+
+        h2 {
+          font-size: 1.3rem;
+
+        }
+      }
+    }
+
+    button.detail-revealer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      color: $purple;
+      font-size: 1rem;
+      font-weight: bold;
+      max-width: 30%;
+      margin: .5rem;
+
+
+      span {
+        font-size: 1.5rem;
+        margin: .2rem;
+        transition: transform .2s ease;
+
+        &.flip {
+          /* ---------------------- bind this class to card state --------------------- */
+          transform: rotate(-180deg);
+        }
+      }
+
+    }
+  }
+
+  &-details {
+    border-top: 1px solid #ebebeb;
+    align-items: flex-start;
+
+    p {
+      color: $grey_text;
+      font-weight: 500;
+      font-size: 0.95rem;
+      margin: 1rem;
+      margin-top: unset;
+      max-width: 60%;
+    }
+
+    button.important-btn {
+      color: white;
+      font-size: 1rem;
+      font-weight: bold;
+      background: $yellow;
+      border-radius: 4px;
+      max-width: 30%;
+      padding: 1.5% 4%;
+
+      &:active {
+        filter: saturate(120%);
+      }
+    }
+
+
+  }
+
+  .collapsible-area {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0.5;
+    transition: max-height .4s ease, opacity .2s ease-in-out;
+
+    &.expanded {
+      opacity: 1 !important;
+      max-height: 100vh;
+    }
+  }
+
+}
