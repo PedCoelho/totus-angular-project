@@ -2,13 +2,19 @@
 
 :host {
   width: 100vw;
+
 }
 
 .search-wrapper {
-  display: flex;
-  font-size: 1.2rem;
   padding: 1rem;
-  box-sizing: border-box;
+  padding-bottom: unset;
+
+  .search-bar {
+    display: flex;
+    font-size: 1.2rem;
+    position: relative;
+    width: 100%;
+  }
 
   input {
     color: rgb(175, 175, 175);
@@ -55,5 +61,46 @@
     font-size: 1rem;
   }
 
+}
+
+.matches-wrapper {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  background: white;
+  max-height: 50vh;
+  overflow-y: auto;
+  border-top: 2px solid rgba(128, 128, 128, 0.1);
+  margin-top: -2px;
+  border-radius: 0 0 4px 4px;
+  opacity: 0;
+  transition: opacity .2s ease, transform .3s ease;
+  visibility: hidden;
+  transform: translateY(-5px);
+
+
+  &.visible {
+    transform: translateY(0px);
+    visibility: visible;
+    opacity: 1;
+  }
+
+  button {
+    color: rgb(175, 175, 175);
+    border-radius: unset;
+    font-weight: bold;
+    padding: 1rem;
+    text-align: left;
+    background: unset;
+    width: 100%;
+
+    &:hover {
+      background-color: #cfcfcf3b;
+    }
+  }
 
 }

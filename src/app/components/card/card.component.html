@@ -4,6 +4,7 @@
       <img [src]="company.logo">
       <h2>{{company.name}}</h2>
     </div>
+    <!-- could be using ngClass directive -->
     <button (click)="detail.classList.toggle('expanded')" class="detail-revealer">
       {{detail.classList.contains('expanded') ? 'Ocultar detalhe da ação' : 'Ver detalhe da ação'}}
       <span [class.flip]="detail.classList.contains('expanded')" class="po-icon po-icon-arrow-down"></span>
