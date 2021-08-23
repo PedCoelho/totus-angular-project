@@ -1,4 +1,4 @@
-import { Company } from './../../interfaces/company.interface';
+import { Company } from '../../interfaces/company.model';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({

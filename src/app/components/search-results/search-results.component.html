@@ -1,6 +1,6 @@
 <section class="search-results po-row">
 
-  <div class="po-lg-6 po-md-12" *ngIf="(results.length)  else emptyList">
+  <div [@itemAnim]="results.length" class="po-lg-6 po-md-12" *ngIf="(results.length) else emptyList">
     <p>Resultado da Busca ({{results.length}})</p>
     <app-card *ngFor="let company of results" [company]="company"></app-card>
   </div>
