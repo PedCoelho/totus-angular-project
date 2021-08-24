@@ -23,11 +23,6 @@ export class SearchBarService {
     return companies;
   }
 
-  // getResults(): Observable<Company[]> {
-  //   let results = of(this.results);
-  //   return results;
-  // }
-
   performSearch(query: string): void {
     let results: Company[]
 
