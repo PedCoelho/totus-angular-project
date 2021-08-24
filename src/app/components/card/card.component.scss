@@ -1,6 +1,7 @@
 @import '../../../colors';
 
 
+
 .card {
   background: white;
   border: 1.5px solid#ebebeb;
@@ -122,6 +123,85 @@
       opacity: 1 !important;
       max-height: 100vh;
     }
+  }
+
+}
+
+/* -------------------------------------------------------------------------- */
+/*                               modal override                               */
+/* -------------------------------------------------------------------------- */
+
+:host ::ng-deep {
+
+  .po-modal {
+
+    &-content {
+      padding: 2rem;
+
+    }
+
+    &-overlay {
+      background-color: hsl(0deg 0% 20% / 70%);
+    }
+
+    &-title {
+      text-align: center;
+    }
+
+    &-footer {
+      display: flex;
+      justify-content: center;
+
+      button {
+
+        color: $purple;
+        font-size: 1.3rem;
+        text-transform: uppercase;
+        background: unset;
+        outline: unset;
+        border: unset;
+        box-shadow: unset;
+        margin: 0 5rem;
+        transition: color .2s ease;
+
+        &:hover,
+        :focus {
+          color: rgb(160, 110, 160);
+        }
+      }
+    }
+
+    @media (max-width: 960px) {
+      &-content {
+        padding: 1rem;
+
+      }
+
+      &-title {
+        font-size: 80%;
+        white-space: pre-wrap;
+
+      }
+
+      &-footer {
+        display: unset;
+        justify-content: unset;
+
+        button {
+
+          color: $purple;
+          font-size: 0.9rem;
+          margin: unset;
+
+          &:hover,
+          :focus {
+            color: rgb(160, 110, 160);
+          }
+        }
+      }
+    }
+
+
   }
 
 }

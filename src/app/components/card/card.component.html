@@ -15,7 +15,15 @@
       <p>
         {{company.description}}
       </p>
-      <button class="important-btn">VER MAIS</button>
+      <button (click)="showModal()" class="important-btn">VER MAIS</button>
     </div>
   </div>
 </div>
+<!-- ----------------------------------------------------------------------- -->
+<!--                                  modal                                  -->
+<!-- ----------------------------------------------------------------------- -->
+<!-- could be in a different component file, interacting via prop / service -->
+<!-- ----------------------------------------------------------------------- -->
+<po-modal p-title="Tem certeza que deseja ir para a tela?" [p-primary-action]="modalConfirm"
+  [p-secondary-action]="modalClose">
+</po-modal>
