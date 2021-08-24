@@ -23,16 +23,17 @@ body {
 /*                            button styling reset                            */
 /* -------------------------------------------------------------------------- */
 button {
+  cursor: pointer;
   background: unset;
   border: unset;
   font-family: inherit;
   padding: unset;
-  cursor: pointer;
   transition: filter 0.2s ease;
+  outline: unset;
 
-
-  &:hover {
-    filter: brightness(0.96) contrast(1.2);
+  &:hover,
+  &:focus {
+    filter: brightness(0.96) contrast(1.2) saturate(1.2);
   }
 }
 

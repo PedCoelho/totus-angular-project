@@ -1,7 +1,7 @@
 import { SearchBarService } from './../search-bar/shared/search-bar.service';
 import { Component, OnInit } from '@angular/core';
 import { Company } from '../../interfaces/company.model';
-import { trigger, transition, style, animate, query, stagger, group } from '@angular/animations';
+import { trigger, transition, style, animate, group } from '@angular/animations';
 
 @Component({
   selector: 'app-search-results',
@@ -9,19 +9,16 @@ import { trigger, transition, style, animate, query, stagger, group } from '@ang
   styleUrls: ['./search-results.component.scss'],
   animations: [
     trigger('itemAnim', [
-      transition(':enter', [
-        style({
-          opacity: 0,
-          transform: 'translateY(-5%)'
-        }),
-        animate(200)
-      ]),
-      transition(':leave', [
+      transition('void=>*', [
+        style({ opacity: 0 }),
+        style({ transform: 'translateY(0%)' }),
         group([
-          animate('0.2s ease', style({ transform: 'translateY(-5%)' })),
-          animate('0.2s 0.1s ease', style({ opacity: 0 }))
-        ])
-      ])
+          animate('0.2s ease', style({ opacity: 0.6 })),
+          animate('0.2s ease', style({ transform: 'translateY(-4%)' })),
+        ]),
+        animate('0.4s ease', style({ transform: 'translateY(0%)' })),
+      ]),
+
     ])
   ]
 })

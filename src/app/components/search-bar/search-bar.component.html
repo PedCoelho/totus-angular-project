@@ -1,14 +1,14 @@
 <div class="po-row flex-center">
   <div class="search-wrapper po-lg-4 po-md-12">
     <div class="search-bar">
-      <input #searchbar (blur)="clearMatches()" (input)="checkMatches($event)" (focus)="checkMatches($event)"
+      <input #searchbar (input)="checkMatches($event)" (focus)="checkMatches($event)"
         (keydown.enter)="handleSearch(searchbar.value, searchbar)" type='search'
         placeholder="Busque por uma empresa (ex: Totvs)" />
       <button (click)="handleSearch(searchbar.value, searchbar)">
         <span class="po-icon po-icon-search"></span>
       </button>
       <div class="matches-wrapper" [ngClass]="{'visible': matches.length}">
-        <button (mousedown)="handleSearch(match, searchbar)" *ngFor="let match of matches">{{ match }}</button>
+        <button (click)="handleSearch(match, searchbar)" *ngFor="let match of matches">{{ match }}</button>
       </div>
     </div>
   </div>

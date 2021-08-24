@@ -2,12 +2,13 @@
 
   <div [@itemAnim]="results.length" class="po-lg-6 po-md-12" *ngIf="(results.length) else emptyList">
     <p>Resultado da Busca ({{results.length}})</p>
-    <app-card *ngFor="let company of results" [company]="company"></app-card>
+    <app-card *ngFor="let company of results" [company]="company">
+    </app-card>
   </div>
 
   <ng-template class="po-lg-6 po-md-12" #emptyList>
-    <div class="no-results-wrapper">
-      <img src="/assets/find.png">
+    <div [@itemAnim]="results.length" class="no-results-wrapper">
+      <img src="./assets/find.png">
       <p>Você ainda não realizou nenhuma busca!</p>
     </div>
   </ng-template>

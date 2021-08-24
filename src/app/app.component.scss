@@ -13,7 +13,7 @@
   align-items: center;
   background: linear-gradient(to right, #4c79e1, #243edd);
 
-  & img {
+  img {
     margin: 8rem 5rem 5rem 5rem;
     max-width: max-content;
   }
@@ -26,4 +26,17 @@ img.svg-wave {
   /* -------------------------------------------------------------------------- */
   margin-top: -1px;
   object-fit: cover;
+}
+
+@media (max-width:960px) {
+  .main-section {
+    img {
+      margin: 4rem 2rem 2rem 2rem;
+    }
+
+    padding-bottom: 2rem;
+    box-sizing: content-box;
+
+  }
+
 }
