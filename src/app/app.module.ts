@@ -4,12 +4,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
 import { PoModule } from '@po-ui/ng-components';
-
-import { SearchBarService } from './components/search-bar/shared/search-bar.service';
+import { PoFieldModule } from '@po-ui/ng-components';
 
 import { AppComponent } from './app.component';
-import { PoFieldModule } from '@po-ui/ng-components';
-import { PoTemplatesModule } from '@po-ui/ng-templates';
 import { SearchResultsComponent } from './components/search-results/search-results.component';
 import { CardComponent } from './components/card/card.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
@@ -27,10 +24,8 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
     AppRoutingModule,
     PoModule,
     PoFieldModule,
-    PoTemplatesModule,
     RouterModule.forRoot([]),
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

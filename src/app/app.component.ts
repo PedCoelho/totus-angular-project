@@ -8,17 +8,9 @@ import { PoMenuItem } from '@po-ui/ng-components';
 })
 export class AppComponent {
 
-  pageTitle: string = 'Projeto Teste'
+  pageTitle: string = 'TOTVS ANGULAR DEMO'
 
   constructor() {
   };
-
-  readonly menus: Array<PoMenuItem> = [
-    { label: 'Home', action: this.onClick.bind(this) }
-  ];
-
-  private onClick() {
-    alert('Clicked in menu item')
-  }
 
 }
